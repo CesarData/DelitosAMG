@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficas</title>
+    <link rel="icon" type="img/svg" href="/img/favicon.svg"/>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png">
+        <h1 class="titulo">Incidencia delictiva del AMG</h1>
+    </header>
+
+    <!--Barra de navegación--> 
+    <div class="nav-bg">
+        <nav class="navegacion-principal">
+            <a href="index.html">Inicio</a>
+            <a href="delitos.html">Delitos</a>
+            <a href="graficas.html">Gráficas</a>
+        </nav>
+    </div>
+    
+    <main class="sombra">
+        <h2>Gráficas</h2>
+       <!--Contenedor de botones--> 
+        <section class="botones">
+            <button id="boton_anual" class="boton">Anual</button>
+            <button id="boton_desglose" class="boton">Desglose</button>
+            <button id="boton_municipio" class="boton">Municipal</button>
+            <button id="boton_categoria" class="boton">Categoría</button>
+        </section>
+        <img id="grafica" src="img/delitos_por_annio_categoria.png" alt="Delitos por año" class="imagen" width="1080">
+    </main>
+    
+    <footer class="footer">
+        <p>Ingeniería de aplicaciones para Ciencia de Datos</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

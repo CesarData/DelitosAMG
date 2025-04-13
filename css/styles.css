@@ -1,0 +1,209 @@
+/* Valores globales*/
+:root {
+    --blanco: #fff;
+    --negro: #000;
+    --primario: #0d6fb8;
+    --secundario: #f68b1f;
+    --grisClaro: #DFE9F3;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Corregir ancho de Box Model **/
+    scroll-snap-type: y mandatory;
+}
+
+/* Aplicar la corrección del Box Model a todos los elementos */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+    text-align: center;
+    margin: 2rem;
+}
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Cambia la alineación de las categorías */
+@media (min-width: 576px){
+    .categorias{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px){
+    .categorias{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+/* Efecto de sombra en cuadro de texto*/
+
+.sombra {
+    max-width: 120rem;
+    margin: 2rem auto;    
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*Estilo para los elementos de la página delitos.html*/
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos{
+    margin-top: 2rem;
+    height: 12rem;
+    width: 12rem;
+    background-color: var(--grisClaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    display: block;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+  }
+
+/** Estilo para los botones **/
+.boton {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    width: 80%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton:active{
+    background-color: var(--secundario);
+    color: var(--negro);
+}
+
+/** Tipografia **/
+h1 {
+    font-size: 3.6rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+/** Navegacion Principal **/
+.nav-bg {
+    background-color: var(--primario);
+}
+
+
+.navegacion-principal {
+    max-width: 60rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+    cursor: pointer;
+}
+
+.navegacion-principal a:active {
+    background-color: var(--secundario);
+    color: var(--negro);
+}
+
+/** Texto **/
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    line-height: 1.5;
+}
+
+/*Aleneación de los botones en función del tamaño de pantalla*/
+
+.botones {
+    max-width: 120rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 576px) {
+    .botones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .botones {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+/** Footer **/
+.footer {
+    text-align: center;
+}
